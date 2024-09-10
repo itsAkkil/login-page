@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Application Form</title>
+<style>
+body {
+  font-family: sans-serif;
+  background-color: #E0FFFF;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+}
+
+.profile {
+  width: 300px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.profile h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile p {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.profile ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.profile li {
+  padding: 5px 0;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.profile li:last-child {
+  border-bottom: none;
+}
+
+.form {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+}
+
+.form h2 {
+  margin-top: 0;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #EEEEEE;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.form input[type="radio"] {
+  margin-right: 5px;
+}
+
+.form button {
+  background-color: #007BFF;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #0056B3;
+}
+
+.form table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.form th,
+.form td {
+  padding: 10px;
+  border: 1px solid #EEEEEE;
+  text-align: left;
+}
+
+.form th {
+  background-color: #F2F2F2;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="profile">
+    <img src="profile.jpg" alt="Profile Picture">
+    <h1>Sahil Kumar</h1>
+    <p>boorasahil111@gmail.com</p>
+    <p>7015694906</p>
+    <ul>
+      <li>Courses: 14</li>
+      <li>Last Login: 19 seconds ago</li>
+    </ul>
+  </div>
+  <div class="form">
+    <h2>Application Form</h2>
+    <label for="abc-id">ABC ID *</label>
+    <input type="text" id="abc-id" placeholder="Create new Abc id click here">
+    <label for="programme">Programme *</label>
+    <select id="programme">
+      <option value="bcom">B.Com</option>
+      <option value="bba">BBA</option>
+      <option value="btech">B.Tech</option>
+    </select>
+    <label for="admission-year">Admission Year</label>
+    <input type="number" id="admission-year" value="2024" min="2023">
+    <label for="name">Name *</label>
+    <input type="text" id="name" placeholder="Sahil">
+    <label for="middle-name">Middle Name</label>
+    <input type="text" id="middle-name" placeholder="Kumar">
+    <label for="father-name">Father Name</label>
+    <input type="text" id="father-name" placeholder="Jitender Kumar">
+    <label for="nationality">Nationality *</label>
+    <select id="nationality">
+      <option value="">Select Nationality</option>
+      <option value="indian">Indian</option>
+      <option value="american">American</option>
+      <option value="british">British</option>
+    </select>
+    <label for="postal-address">Postal Address *</label>
+    <input type="text" id="postal-address" placeholder="Address Line 1">
+    <input type="text" id="postal-address" placeholder="Address Line 2">
+    <label for="country">Country</label>
+    <select id="country">
+      <option value="">Select country</option>
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+    </select>
+    <label for="state">State</label>
+    <select id="state">
+      <option value="">Select State</option>
+      <option value="haryana">Haryana</option>
+      <option value="punjab">Punjab</option>
+      <option value="delhi">Delhi</option>
+    </select>
+    <label for="city">City</label>
+    <input type="text" id="city" placeholder="City">
+    <label for="pincode">Pincode</label>
+    <input type="number" id="pincode" placeholder="Pincode">
+    <label for="gender">Gender *</label>
+    <select id="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <h2>Education Qualification</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Examination Passed</th>
+          <th>Degree / Course Name</th>
+          <th>Board / University</th>
+          <th>Mode</th>
+          <th>Year of Passing</th>
+          <th>Marks/CGPA Obtained</th>
+          <th>Total Marks / CGPA</th>
+          <th>%age / CGPA</th>
+          <th>Division</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Matric*</td>
+          <td><input type="text"></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="cbse">CBSE</option>
+            <option value="haryana-board">Haryana Board</option>
+          </select></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="regular">Regular</option>
+            <option value="private">Private</option>
+          </select></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+          </select></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>10 + 2/ Equivalent*</td>
+          <td><input type="text"></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="cbse">CBSE</option>
+            <option value="haryana-board">Haryana Board</option>
+          </select></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="regular">Regular</option>
+            <option value="private">Private</option>
+          </select></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+          </select></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>Graduation</td>
+          <td><input type="text"></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="delhi-university">Delhi University</option>
+            <option value="punjab-university">Punjab University</option>
+          </select></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="regular">Regular</option>
+            <option value="private">Private</option>
+          </select></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+          </select></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>P.G. Diploma</td>
+          <td><input type="text"></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="delhi-university">Delhi University</option>
+            <option value="punjab-university">Punjab University</option>
+          </select></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="regular">Regular</option>
+            <option value="private">Private</option>
+          </select></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+          </select></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>Post Graduation</td>
+          <td><input type="text"></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="delhi-university">Delhi University</option>
+            <option value="punjab-university">Punjab University</option>
+          </select></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="regular">Regular</option>
+            <option value="private">Private</option>
+          </select></td>
+          <td><select>
+            <option value="">Select</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+          </select></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+      </tbody>
+    </table>
+    <label for="disqualified">Were you ever disqualified by any board or university / board to appear any examination?</label>
+    <select id="disqualified">
+      <option value="">Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="aadhar-no">Aadhar No. *</label>
+    <input type="text" id="aadhar-no" placeholder="Aadhar No.">
+    <label for="bank-account-no">Bank Account No. (Candidates) *</label>
+    <input type="text" id="bank-account-no" placeholder="Bank Account No.">
+    <label for="ifsc-code">IFSC Code *</label>
+    <input type="text" id="ifsc-code" placeholder="IFSC Code">
+    <label for="passport-no">Passport No.</label>
+    <input type="text" id="passport-no" placeholder="Passport No.">
+    <label for="bank-name">Bank Name (With City) *</label>
+    <input type="text" id="bank-name" placeholder="Bank Name (With City)">
+    <label for="declaration">DECLARATION BY THE APPLICANT</label>
+    <input type="checkbox" id="declaration">
+    <p>It is hereby declared that I have read and understood the conditions of eligibility for the programme for which I seek admission. I fulfill the minimum eligibility criteria and I have been
+    provided with the necessary information in this regard. In the event of any information found incorrect or misleading, my candidature shall be liable to the cancellation by the university
+    at any time I shall not be entitled to refund of any fee paid by me to the university. I have received a copy of the prospectus supplied by the university.</p>
+    <button type="submit">Submit</button>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header img {
+            border-radius: 50%;
+        }
+
+        .header .user-info {
+            text-align: center;
+        }
+
+        .header .user-info h2 {
+            margin-bottom: 5px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            flex: 1;
+            min-width: 200px;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            flex: 2;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .form-group select {
+            padding: 6px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .education-section {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .education-section h3 {
+            margin-bottom: 10px;
+        }
+
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .education-table th, .education-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .education-table th {
+            background-color: #f2f2f2;
+        }
+
+        .declaration-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .declaration-section input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .btn-container {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div>
+            <img src="profile_placeholder.png" alt="Profile Image" width="80" height="80">
+        </div>
+        <div class="user-info">
+            <h2>Sahil Kumar</h2>
+            <p>Email: boorsahil111@gmail.com</p>
+            <p>Mobile: 7051694604</p>
+            <p>Last Login: 19 seconds ago</p>
+        </div>
+    </div>
+
+    <form>
+        <!-- First section of the form -->
+        <div class="form-group">
+            <label for="abc-id">ABC ID</label>
+            <input type="text" id="abc-id" placeholder="Create new ABC ID">
+        </div>
+        <div class="form-group">
+            <label for="programme">Programme</label>
+            <select id="programme">
+                <option value="bcom">B.Com</option>
+                <!-- More options can be added here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="admission-year">Admission Year</label>
+            <input type="text" id="admission-year" value="2024">
+        </div>
+        <div class="form-group">
+            <label for="student-name">Name</label>
+            <input type="text" id="student-name" value="Sahil">
+        </div>
+        <div class="form-group">
+            <label for="father-name">Father Name</label>
+            <input type="text" id="father-name" value="Jitender Kumar">
+        </div>
+        <div class="form-group">
+            <label for="mother-name">Mother Name</label>
+            <input type="text" id="mother-name" value="Sunil Kumari">
+        </div>
+
+        <!-- More form fields similar to the ones above can be added here -->
+
+        <!-- Education Section -->
+        <div class="education-section">
+            <h3>Education Qualification</h3>
+            <table class="education-table">
+                <tr>
+                    <th>Examination Passed</th>
+                    <th>Degree / Course Name</th>
+                    <th>Board / University</th>
+                    <th>Mode</th>
+                    <th>Year of Passing</th>
+                    <th>Marks / CGPA Obtained</th>
+                    <th>Total Marks / CGPA</th>
+                    <th>%age / CGPA</th>
+                    <th>Division</th>
+                </tr>
+                <tr>
+                    <td>Matric</td>
+                    <td><input type="text" placeholder="Degree Name"></td>
+                    <td><input type="text" placeholder="Board / University"></td>
+                    <td><select><option>Select</option></select></td>
+                    <td><select><option>Select</option></select></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <!-- More rows can be added here for more education qualifications -->
+            </table>
+        </div>
+
+        <!-- Declaration section -->
+        <div class="declaration-section">
+            <input type="checkbox" id="declaration">
+            <label for="declaration">I hereby declare that I have read and understood the conditions of eligibility for the programme...</label>
+        </div>
+
+        <div class="btn-container">
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

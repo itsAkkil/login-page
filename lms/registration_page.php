@@ -168,6 +168,18 @@
                     </select>
                 </div>
 
+                        <!-- Registration Fee (Readonly) -->
+                <div class="mb-3">
+                    <label for="registrationFee" class="form-label">Registration Fee (in Rs.)</label>
+                    <input type="text" name="registrationFee" class="form-control" id="registrationFee" readonly>
+                </div>
+
+                <!-- Eligibility Criteria (Readonly) -->
+                <div class="mb-3">
+                    <label for="eligibilityCriteria" class="form-label">Eligibility Criteria</label>
+                    <textarea name="eligibilityCriteria" class="form-control" id="eligibilityCriteria" rows="3" readonly></textarea>
+                </div>
+
                 <!-- Student Name -->
                 <div class="mb-3">
                     <label for="studentName" class="form-label">Student Name*</label>
@@ -271,36 +283,35 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function () {
-            getdata();
-        });
+    // When the program is changed, fetch the corresponding fee and eligibility criteria
+    $('#programme').change(function() {
+        var program_id = $(this).val();
 
-        function getdata()
-        {
+        if (program_id) {
             $.ajax({
-                type: "GET",
-                url: "ajax-crud/fetch.php",
-                success: function (response) {
-                    // console.log(response);
-                    $.each(response, function (key, value) { 
-                        // console.log(value['fname']);
-                        $('.studentdata').append('<tr>'+
-                                '<td class="stud_id">'+value['id']+'</td>\
-                                <td>'+value['fname']+'</td>\
-                                <td>'+value['lname']+'</td>\
-                                <td>'+value['class']+'</td>\
-                                <td>'+value['section']+'</td>\
-                                <td>\
-                                    <a href="#" class="badge btn-info viewbtn">VIEW</a>\
-                                    <a href="#" class="badge btn-primary edit_btn">EDIT</a>\
-                                    <a href="" class="badge btn-danger">Delete</a>\
-                                </td>\
-                            </tr>');
-                    });
+                url: 'get_program_info.php',  // PHP script to fetch program data
+                type: 'GET',
+                data: { program_id: program_id },
+                dataType: 'json',
+                success: function(data) {
+                    if (data.error) {
+                        alert(data.error);
+                    } else {
+                        // Populate the fee and eligibility fields
+                        $('#fee').val(data.fee);
+                        $('#eligibility').val(data.eligibility_criteria);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    alert("An error occurred while fetching the data: " + error);
                 }
             });
+        } else {
+            $('#fee').val('');
+            $('#eligibility').val('');
         }
-    </script>
+    });
+</script>
 </body>
 
 </html>
